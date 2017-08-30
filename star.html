@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link type="text/css" rel="stylesheet" href="demo/css/application.css">
+  <script type="text/javascript" src="demo/js/jquery.min.js"></script>
+  <script type="text/javascript" src="lib/jquery.raty.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="half-demo"></div>
+
+  <script type="text/javascript">
+    $.fn.raty.defaults.path = 'lib/img';
+
+    $('#half-demo').raty({
+      path: 'demo/img',
+      cancelOff: 'cancel-off-big.png',
+      cancelOn: 'cancel-on-big.png',
+      half: true,
+      size: 24,
+      starHalf: 'star-half-big.png',
+      starOff: 'star-off-big.png',
+      starOn: 'star-on-big.png',
+      click: function(score, evt) {
+        alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt);
+      }
+    });
+  </script>
+</body>
+
+</html>
